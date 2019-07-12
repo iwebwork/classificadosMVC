@@ -3,11 +3,9 @@
 
         public function index()
         {
-            $anuncios = new Anuncios();
-            $usuarios = new Usuarios;
             $dados = array(
-                'quantidade' => $anuncios->getQuantidade(),
-                'usuarios' => $usuarios->getQuantidade()
+                'quantidade' => 9,
+                'usuarios' => 8
             );
             $this->loadTempleteOne('home',$dados);
 

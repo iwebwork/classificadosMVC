@@ -5,7 +5,7 @@
 
     //Informações para o banco interno
     if(ENVIRONMENT == 'development'){
-        define("BASE_URL","http://localhost/testeMVC/");
+        define("BASE_URL","http://localhost/classificadosMVC/");
         $config['dbname'] = 'testeMVC';
         $config['host'] = '127.0.0.1';
         $config['dbuser'] = 'root';

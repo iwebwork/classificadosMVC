@@ -1,2 +1,1 @@
-projeto iniciado
-Estrutura base do projeto feita
+Inicio do projeto
