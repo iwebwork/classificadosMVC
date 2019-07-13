@@ -1,11 +1,11 @@
 <?php
  class model{
 
-    protected $pdo;
+    protected $db;
 
     public function __construct(){
-        global $pdo;
-        $this->pdo = $pdo;
+        global $db;
+        $this->db = $db;
     }
 
     
