@@ -19,4 +19,16 @@
             require 'views/'.$viewName.'.php';
         }
 
+        public function loadTemplateLogin($viewName,$viewData = array())
+        {
+            require 'views/templateLogin.php';
+        }
+
+        public function loadViewInTemplateLogin($viewName,$viewData = array())
+        {
+            extract($viewData);
+            require 'views/'.$viewName.'.php';
+        }
+
+
     }

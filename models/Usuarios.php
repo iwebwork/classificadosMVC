@@ -46,6 +46,22 @@ class Usuarios extends model {
 
 	}
 
+	public function getNomeUsuario($id)
+	{
+		$sql = $this->db->prepare("SELECT * FROM usuarios WHERE id =:id ");
+		$sql->bindValue(":id", $id);
+		$sql->execute();
+
+		if($sql->rowCount() > 0) {
+			$dado = $sql->fetch();
+			//print_r($dado);
+			$_SESSION['nomeUsuario'] = $dado['nome'];
+			return true;
+		} else {
+			return false;
+		}
+	}
+
 
 
 

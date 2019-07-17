@@ -7,6 +7,8 @@
             $u = new Usuarios();
             $c = new Categorias();
 
+            $u->getNomeUsuario($_SESSION['cLogin']);
+
             $filtros = array(
                 'categoria' => '',
                 'preco' => '',
@@ -36,7 +38,7 @@
                 'categorias' => $categorias,
                 'filtros' => $filtros,
                 'anuncios' => $anuncios,
-                'total_paginas' => $total_paginas 
+                'total_paginas' => $total_paginas
             );
             $this->loadTempleteOne('home',$dados);
 

@@ -7,6 +7,7 @@
         <title>Classificados em MVC</title>
         <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL;?>assets/css/bootstrap.min.css"/>
         <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL;?>assets/css/style.css"/>
+        <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL;?>assets/css/login.css"/>
     </header>
     <body>
 
@@ -17,19 +18,20 @@
         </button>
         <div class="collapse navbar-collapse d-flex flex-row-reverse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="textNav nav-item">
-                    <a class="nav-link" href="<?php echo BASE_URL;?>login"><h6 class="textNav">Login</h6></a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle bg-primary" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <texto class="textNav"><?php  echo $_SESSION['nomeUsuario'];?><texto>
+                    </a>
+                    <span class="dropdown-menu bg-primary" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item textNav" href="<?php echo BASE_URL?>sair">Sair</a>
+                    </span>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link textNav" href="<?php echo BASE_URL;?>cadastrar"><h6 class="textNav">Cadastre-se</h6> <span class="sr-only">(current)</span></a>
                 </li>
+                <li>
                     <a class="nav-link textNav" href="<?php echo BASE_URL;?>anuncios"><h6 class="textNav">Meus Anuncios</h6><span class="sr-only">(current)</span></a>
                 </li>
-                
-                <li class="nav-item active">
-                    <a class="nav-link textNav" href="<?php echo BASE_URL;?>login/sair"><h6 class="textNav">Sair</h6> <span class="sr-only">(current)</span></a>
-                </li>
-                
             </ul>
         </div>
     </nav>
