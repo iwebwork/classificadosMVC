@@ -1,6 +1,37 @@
 <?php
 class Usuarios extends model {
 
+	/*
+		Atributos
+		nome,email,senha,telefone
+	*/
+
+	public function inserir($dados)
+	{
+		try {
+			//print_r($dados);
+			$sql = "INSERT INTO usuarios (nome,email,senha,telefone) VALUES 
+			(:nome,:email,:senha,:telefone)";
+					//$sql = $this->pdo->prepare('INSERT INTO proprietario (cpf,nome_propri,pais,estado,cidade,bairro,rua,numero,telefone)
+					//VALUES (:cpf,:nome_propri,:pais,:estado,:cidade,:bairro,:rua,:numero,:telefone)');
+			$sql = $this->db->prepare($sql);
+			$sql->bindValue(':nome' ,$dados['nome']);
+			$sql->bindValue(':email' ,$dados['email']);
+			$sql->bindValue(':senha' ,md5($dados['senha']));
+			$sql->bindValue(':telefone' ,$dados['telefone']);
+					
+			if ($sql->execute()) {
+				//echo "Dono cadaastrado com sucesso";
+				return true;
+			}else{
+				return false;
+			} 
+					
+		} catch (Exception $e) {
+			echo 'Error: ' . $e->getMessage();
+		}
+	}
+
 	public function getTotalUsuarios() {
 		$sql = $this->db->query("SELECT COUNT(*) as c FROM usuarios");
 		$row = $sql->fetch();

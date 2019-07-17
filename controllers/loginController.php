@@ -13,7 +13,8 @@
         {
             session_destroy();
             $dados['resposta'] = 'none';
-            $this->loadTemplateLogin('login',$dados);
+            header("Location: ".BASE_URL);
+            exit;
         }
 
 

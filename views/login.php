@@ -23,7 +23,7 @@
       <a class="underlineHover" href="#">Esqueci minha senha</a>
     </div>-->
     <div id="formFooter">
-      <a class="underlineHover" href="#">Cadastre-se</a>
+      <a class="underlineHover" href="<?php echo BASE_URL?>cadastrar">Cadastre-se</a>
     </div>
 
   </div>

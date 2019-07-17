@@ -30,5 +30,16 @@
             require 'views/'.$viewName.'.php';
         }
 
+        public function loadTemplateCadastrar($viewName,$viewData = array())
+        {
+            require 'views/templateCadastrar.php';
+        }
+
+        public function loadViewInTemplateCadastrar($viewName,$viewData = array())
+        {
+            extract($viewData);
+            require 'views/'.$viewName.'.php';
+        }
+
 
     }

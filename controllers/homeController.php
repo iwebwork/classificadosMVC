@@ -66,7 +66,6 @@
                     $dados['resposta'] = 'block';
                     $this->loadTemplateLogin('login',$dados);
                 }
-
             }
 
             
