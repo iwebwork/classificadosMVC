@@ -12,8 +12,8 @@
         public function sair()
         {
             session_destroy();
-            header("Location: ".BASE_URL."login/index");
-            exit;
+            $dados['resposta'] = 'none';
+            $this->loadTemplateLogin('login',$dados);
         }
 
 

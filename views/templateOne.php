@@ -26,12 +26,9 @@
                         <a class="dropdown-item textNav" href="<?php echo BASE_URL?>login/sair">Sair</a>
                     </span>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link textNav" href="<?php echo BASE_URL;?>cadastrar"><h6 class="textNav">Cadastre-se</h6> <span class="sr-only">(current)</span></a>
-                </li>
-                <li>
+                <!--<li>
                     <a class="nav-link textNav" href="<?php echo BASE_URL;?>anuncios"><h6 class="textNav">Meus Anuncios</h6><span class="sr-only">(current)</span></a>
-                </li>
+                </li>-->
             </ul>
         </div>
     </nav>
