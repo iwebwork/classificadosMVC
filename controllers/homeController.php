@@ -6,8 +6,23 @@
             $a = new Anuncios();
             $u = new Usuarios();
             $c = new Categorias();
+            $dados = array();
 
-            $u->getNomeUsuario($_SESSION['cLogin']);
+            $dados = array();
+            $dados['nomeUsuario'] = '';
+            $usuario = new Usuarios();
+            if(!empty($_POST)){
+                //echo "Post não esta vazio";
+                $_SESSION['cLogin'] = $usuario->login($_POST['email'],$_POST['senha']);
+            }
+
+            if($_SESSION['cLogin'] == false){
+                $this->loadTemplateLogin('login',$dados);
+            }else{
+                //echo "Entrou no else";
+                $_SESSION['nomeUsuario'] = $u->getNomeUsuario($_SESSION['cLogin']);
+                //echo $dados['nomeUsuario'];
+            }
 
             $filtros = array(
                 'categoria' => '',
@@ -32,14 +47,15 @@
             $anuncios = $a->getUltimosAnuncios($p, $por_pagina, $filtros);
             $categorias = $c->getLista();
 
-            $dados = array(
-                'total_anuncios' => $total_anuncios,
-                'total_usuarios' => $total_usuarios,
-                'categorias' => $categorias,
-                'filtros' => $filtros,
-                'anuncios' => $anuncios,
-                'total_paginas' => $total_paginas
-            );
+             
+            $dados['total_anuncios'] = $total_anuncios;
+            $dados['total_usuarios'] = $total_usuarios;
+            $dados['categorias'] = $categorias;
+            $dados['filtros'] = $filtros;
+            $dados['anuncios'] = $anuncios;
+            $dados['total_paginas'] = $total_paginas;
+            //print_r($dados);
+            
             $this->loadTempleteOne('home',$dados);
 
         }

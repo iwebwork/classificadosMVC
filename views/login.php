@@ -9,7 +9,7 @@
     </div>
 
     <!-- Login Form -->
-    <form method="POST" action="<?php echo BASE_URL; ?>login/logar">
+    <form method="POST" action="<?php echo BASE_URL?>">
       <input type="text" id="login" class="fadeIn second" name="email" placeholder="Email">
       <input type="text" id="password" class="fadeIn third" name="senha" placeholder="Senha">
       <input type="submit" class="fadeIn fourth" value="Entrar">

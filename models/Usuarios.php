@@ -38,8 +38,8 @@ class Usuarios extends model {
 
 		if($sql->rowCount() > 0) {
 			$dado = $sql->fetch();
-			$_SESSION['cLogin'] = $dado['id'];
-			return true;
+			//echo "Vai setar o id";
+			return $dado['id'];
 		} else {
 			return false;
 		}
@@ -55,8 +55,7 @@ class Usuarios extends model {
 		if($sql->rowCount() > 0) {
 			$dado = $sql->fetch();
 			//print_r($dado);
-			$_SESSION['nomeUsuario'] = $dado['nome'];
-			return true;
+			return $dado['nome'];;
 		} else {
 			return false;
 		}

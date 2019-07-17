@@ -20,10 +20,10 @@
             <ul class="navbar-nav">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle bg-primary" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <texto class="textNav"><?php  echo $_SESSION['nomeUsuario'];?><texto>
+                        <texto class="textNav"><?php echo $_SESSION['nomeUsuario'];?><texto>
                     </a>
                     <span class="dropdown-menu bg-primary" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item textNav" href="<?php echo BASE_URL?>sair">Sair</a>
+                        <a class="dropdown-item textNav" href="<?php echo BASE_URL?>login/sair">Sair</a>
                     </span>
                 </li>
                 <li class="nav-item active">
