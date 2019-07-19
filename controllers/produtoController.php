@@ -14,14 +14,21 @@
             if(empty($id)){
                 header("Location: ".BASE_URL);
                 exit;
+            }else{
+                if($_SESSION['cLogin'] == false){
+                    header("Location: ".BASE_URL);
+                    exit;
+                }else if($_SESSION['cLogin'] == true){
+                    $info = $a->getAnuncio($id);
+                    $dados = array(
+                        'info' => $info
+                    );
+                    $this->loadTempleteOne('produto', $dados);
+                }
+
             }
 
-            $info = $a->getAnuncio($id);
-            $dados = array(
-                'info' => $info
-            );
-            $this->loadTempleteOne('produto', $dados);
-
+            
         }
 
     }

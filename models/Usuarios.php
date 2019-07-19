@@ -6,6 +6,15 @@ class Usuarios extends model {
 		nome,email,senha,telefone
 	*/
 
+	public function verificarLogin($var)
+	{
+		$sql = $this->db->prepare("SELECT id FROM usuarios WHERE id = :id");
+		$sql->bindValue(":id", $var);
+		return $sql->execute();
+
+	}
+
+
 	public function inserir($dados)
 	{
 		try {

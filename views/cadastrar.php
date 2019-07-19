@@ -5,7 +5,7 @@
                     <div class="card">
                         <div class="card-header">Cadastre-se</div>
                         <div class="card-body">
-                            <form method="POST" name="my-form" onsubmit="return validform()" action="<?php echo BASE_URL; ?>cadastrar/inserir"  method="">
+                            <form method="POST" name="my-form" onsubmit="return validform()" action="<?php echo BASE_URL; ?>cadastrar/inserir">
                                 <div class="form-group row">
                                     <label for="full_name" class="col-md-4 col-form-label text-md-right">Nome</label>
                                     <div class="col-md-6">

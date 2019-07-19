@@ -9,7 +9,7 @@
     </div>
 
     <!-- Login Form -->
-    <form method="POST" action="<?php echo BASE_URL?>">
+    <form method="POST" action="<?php echo BASE_URL;?>login">
       <input type="text" id="login" class="fadeIn second" name="email" placeholder="Email">
       <input type="text" id="password" class="fadeIn third" name="senha" placeholder="Senha">
       <input type="submit" class="fadeIn fourth" value="Entrar">
@@ -23,7 +23,7 @@
       <a class="underlineHover" href="#">Esqueci minha senha</a>
     </div>-->
     <div id="formFooter">
-      <a class="underlineHover" href="<?php echo BASE_URL?>cadastrar">Cadastre-se</a>
+      <a class="underlineHover" href="<?php echo BASE_URL;?>cadastrar">Cadastre-se</a>
     </div>
 
   </div>

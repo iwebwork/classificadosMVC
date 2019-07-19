@@ -12,7 +12,7 @@
     <body>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-primary navBaseStyle">
-        <a class="navbar-brand" href="<?php echo BASE_URL;?>"><h6 class="textNav">Classificados</h6></a>
+        <a class="navbar-brand" href="<?php echo BASE_URL;?>home"><h6 class="textNav">Classificados</h6></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -26,9 +26,15 @@
                         <a class="dropdown-item textNav" href="<?php echo BASE_URL?>login/sair">Sair</a>
                     </span>
                 </li>
-                <!--<li>
-                    <a class="nav-link textNav" href="<?php echo BASE_URL;?>anuncios"><h6 class="textNav">Meus Anuncios</h6><span class="sr-only">(current)</span></a>
-                </li>-->
+                <li>
+                    <h1 class="nav-link textNav" href=""><h6 class="textNav"></h6><span class="sr-only">(current)</span></h1>
+                </li>
+                <li>
+                    <h1 class="nav-link textNav" href=""><h6 class="textNav"></h6><span class="sr-only">(current)</span></h1>
+                </li>
+                <li>
+                    <h1 class="nav-link textNav" href=""><h6 class="textNav"></h6><span class="sr-only">(current)</span></h1>
+                </li>
             </ul>
         </div>
     </nav>

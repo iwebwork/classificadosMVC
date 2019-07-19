@@ -70,11 +70,18 @@
 
 			<ul class="pagination">
 				<?php for($q=1;$q<=$total_paginas;$q++): ?>
-				<li class="<?php echo ($p==$q)?'active':''; ?>"><a href="<?php echo BASE_URL;?>?<?php
-				$w = $_GET;
-				$w['p'] = $q;
-				echo http_build_query($w);
-				?>"><?php echo $q; ?></a></li>
+					<li class="<?php echo ($p==$q)?'active':''; ?>">
+						<a href="<?php echo BASE_URL;?>?
+							<?php 
+								$w = $_GET;
+								$w['p'] = $q;
+								echo http_build_query($w);
+							?>">
+							<?php 
+								echo $q; 
+							?>
+						</a>
+					</li>
 				<?php endfor; ?>
 			</ul>
 		</div>
